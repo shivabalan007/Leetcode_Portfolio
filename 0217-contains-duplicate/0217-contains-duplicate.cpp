@@ -1,17 +1,13 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_map<int,int> fre;
-        for(int i=0;i<nums.size();i++){
-            fre[nums[i]]++;
-        }
-
-        for(auto it:fre){
-            if(it.second>1){
+        unordered_set<int> fre;
+        for(auto n:nums){
+            if(fre.find(n) != fre.end()){
                 return true;
             }
+            fre.insert(n);
         }
         return false;
-        
     }
 };
