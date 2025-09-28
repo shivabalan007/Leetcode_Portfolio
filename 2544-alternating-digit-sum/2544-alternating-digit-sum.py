@@ -14,5 +14,4 @@ class Solution(object):
                 neg+=int(digi[i])
         
         return pos-neg
-            
         
