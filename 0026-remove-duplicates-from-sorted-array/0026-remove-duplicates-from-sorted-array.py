@@ -9,4 +9,3 @@ class Solution:
             else:
                 dup[val] = 1
         return len(nums)
-
