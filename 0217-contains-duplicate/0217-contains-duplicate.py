@@ -4,7 +4,10 @@ class Solution:
         for n in nums:
             if n in fre:
                 fre[n] += 1
-                return True
             else:
                 fre[n] = 1
-        return False
+    
+        if all(v == 1 for v in fre.values()):
+            return False
+        else:
+            return True
